@@ -3,30 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
 	<title>Frispers</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet">
+	<script src="script.js"></script>
 </head>
 <body>
+	<?php
+		require_once "header.html";
+	?>
 	<header class="header">
 		<div class="container">
-			<div class="up_menu">
-				<p class="logo">Frispers.</p>
-				<ul class="menu">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Workspace</a></li>
-					<li><a href="#">Service</a></li>
-					<li><a href="#">Events</a></li>
-					<li><a href="#">Revievs</a></li>
-					<li><a href="#">Contact us</a></li>
-				</ul>
-				<ul class="login">
-					<li><a href="#">Log in</a></li>
-					<li><a href="#">Sign up</a></li>
-				</ul>
-			</div>
 			<div class="introducting">
 				<p>Introducing</p>
 				<hr>
@@ -151,6 +140,10 @@
 				
 			</div>
 		</div>
+		<div class="display">
+			<div id="time"></div>
+		</div>
 	</footer>
+	<script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,44 @@
+p {
+	padding-top: 10px;
+}
+input {
+	margin: 10px 0 5px 0;
+}
+.register {
+	padding: 150px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: linear-gradient(to bottom right, #10375C, #2d874c);
+}
+#reg {
+	font-size: 30px;
+	margin-left: 20px;
+}
+.register-form {
+	max-width: 200px;
+	display: flex;
+	align-items: center;
+}
+.input {
+	padding: 10px 30px;
+	border-radius: 5px;
+	background-color: #97a7b8;
+}
+#button {
+	background-color: #875718;
+	margin-top: 15px;
+}
+#button:hover {
+	background-color: #10375C;
+	color: #fff;
+	transition: 0.1s;
+	cursor: pointer;
+}
+#loginlink {
+	font-size: 18px;
+	margin-top: 10px;
+	color: #0000EE;
+	text-decoration: underline;
+}

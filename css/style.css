@@ -280,6 +280,7 @@ footer {
 	background-color: #0D2C4A;
 	height: 350px;
 	color: #fff;
+	padding-bottom: 40px;
 }
 .footer-top {
 	display: flex;
@@ -309,9 +310,8 @@ footer {
 	color: #fff;
 }
 .info:hover {
-	border-bottom: 2px solid #FF5722;
-	transition: 0.03s;
-	border-top: 2px solid #FF5722;
+	border-left: 2px solid #FF5722;
+	transition: 0.13s;
 }
 .footer-left-icons {
 	display: flex;
@@ -319,10 +319,13 @@ footer {
 }
 .footer-icon {
 	padding: 3px;
-	margin: 4px 0px 4px 0px;
+	margin: 10px 0px 4px 0px;
 	background-color: #fff;
 }
 .footer-icon:hover {
 	background-color: #FF5722;
 	transition: 0.2s;
+}
+#time {
+	border: 2px solid #000;
 }
