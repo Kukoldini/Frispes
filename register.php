@@ -1,6 +1,4 @@
-<?php
-	session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +10,7 @@
 </head>
 <body>
 	<?php 
-		require_once "header.html";
+		require_once "header.php";
 		require_once "php/connection.php"
 	?>
 	<div class="register">
@@ -35,15 +33,10 @@
 			    	//Проверка свободного логина
 			    	$sqlLoginVerify = mysqli_query($conn, "SELECT * FROM `user_accounts` WHERE `login` = '$login'");
 					if (mysqli_num_rows($sqlLoginVerify) > 0) {
-			    		$_SESSION['loginAlert'] = "This login name is already taked";
 			    		echo "This login is already taked";
 			    	} 
 			    	//Проверка заполненности всех полей
-			    	elseif (empty($mail)) {
-			    		echo "Fill in all fields";
-			    	} elseif (empty($login)) {
-			    		echo "Fill in all fields";
-			    	} elseif (empty($password)) {
+			    	if (empty($mail) or empty($login) or empty($password)) {
 			    		echo "Fill in all fields";
 			    	} else {
 			    		//Добавление в базу данных, перенаправление на страницу входа

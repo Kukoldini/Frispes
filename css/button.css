@@ -1,0 +1,13 @@
+#logout {
+	margin-top: -10px;
+	font-size: 18px;
+	color: #FF5722;
+	padding: 12px 24px;
+	border: none;
+	border-radius: 3px;
+}
+#logout:hover {
+	background-color: #FF5722;
+	transition: 0.1s;
+	color: #fff;
+}

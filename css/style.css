@@ -144,6 +144,7 @@ hr {
 	text-align: center;
 }
 .form-button:hover {
+	cursor: pointer;
 	background-color: #0D2C4A;
 	transition: 0.1s;
 }

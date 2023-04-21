@@ -1,6 +1,4 @@
-<?php
-	session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +13,7 @@
 </head>
 <body>
 	<?php
-		require_once "header.html";
+		require_once "header.php";
 	?>
 	<header class="header">
 		<div class="container">

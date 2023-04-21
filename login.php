@@ -1,6 +1,3 @@
-<?php
-	session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,16 +9,17 @@
 </head>
 <body>
 	<?php 
-		require_once "header.html";
+		require_once "header.php";
 		require_once "php/connection.php";
 		if (isset($_POST['sglogin']) and isset($_POST['sgpassword'])) {
 	  		$sglogin = $_POST['sglogin'];
 			$sgpassword = md5($_POST['sgpassword']);
 			$check_user = mysqli_query($conn, "SELECT * FROM user_accounts WHERE login = '$sglogin' AND password = '$sgpassword'");
 			if (mysqli_num_rows($check_user) > 0) {
+				$_SESSION['user_id'] = $sglogin;
 				header('Location: index.php');
 			} else {
-				$_SESSION['msg'] = 'Wrong login or password';
+				$alert = "Wrong login or password";
 			}
 	  	}
 	?>
@@ -35,10 +33,9 @@
 			</form>
 		</div>
 		<?php
-			if (isset($_SESSION['msg'])) {
-				echo '<p class="msg"> ' . $_SESSION['msg'] . ' </p>';
+			if (!empty($alert)) {
+				echo $alert;
 			}
-			unset($_SESSION['msg']);
 		?>
 		<p>Don't have account yet?</p>
 		<a href="register.php" id="loginlink">Create account</a>
