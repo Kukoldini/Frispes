@@ -13,7 +13,17 @@
 <body>
 	<?php 
 		require_once "header.html";
-		require_once "php/connection.php"
+		require_once "php/connection.php";
+		if (isset($_POST['sglogin']) and isset($_POST['sgpassword'])) {
+	  		$sglogin = $_POST['sglogin'];
+			$sgpassword = md5($_POST['sgpassword']);
+			$check_user = mysqli_query($conn, "SELECT * FROM user_accounts WHERE login = '$sglogin' AND password = '$sgpassword'");
+			if (mysqli_num_rows($check_user) > 0) {
+				header('Location: index.php');
+			} else {
+				$_SESSION['msg'] = 'Wrong login or password';
+			}
+	  	}
 	?>
 	<div class="register">
 	<p id="reg">Log in</p>
@@ -24,21 +34,17 @@
  				<button class="input" id="button" type="sgsubmit" name="submit">Log in</button>
 			</form>
 		</div>
+		<?php
+			if (isset($_SESSION['msg'])) {
+				echo '<p class="msg"> ' . $_SESSION['msg'] . ' </p>';
+			}
+			unset($_SESSION['msg']);
+		?>
 		<p>Don't have account yet?</p>
 		<a href="register.php" id="loginlink">Create account</a>
 	</div>
 	<?php 
-  		
-	  	if (isset($_POST['sglogin']) and isset($_POST['sgpassword'])) {
-	  		$sglogin = $_POST['sglogin'];
-			$sgpassword = md5($_POST['sgpassword']);
-			$check_user = mysqli_query($conn, "SELECT * FROM user_accounts WHERE login = '$sglogin' AND password = '$sgpassword'");
-			if (mysqli_num_rows($check_user) > 0) {
-				echo "string";
-			} else {
-				echo $_SESSION['message'] = "Wrong login or password";
-			}
-	  	}
+  		require_once "footer.html";
 	?>
 </body>
 </html>

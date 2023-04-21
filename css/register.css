@@ -42,3 +42,7 @@ input {
 	color: #0000EE;
 	text-decoration: underline;
 }
+#loginlink:hover {
+	color: #97a7b8;
+	transition: 0.07s;
+}

@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -119,31 +122,9 @@
 				</div>
 		</div>
 	</section>
-	<footer>
-		<div class="container">
-			<div class="footer-top">
-				<h2 class="footer-logo">Frispes</h2>
-				<p class="footer-text">We offer comfortable spaces, cozy cafe, high-speed internet, spacious parking area an many more for your best workspaces and meetings</p>
-			</div>
-			<div class="footer-bottom">
-				<div class="footer-company">
-					<a href="" class="info">About Us</a>
-					<a href="" class="info">Pricing</a>
-					<a href="" class="info">Careers</a>
-					<a href="" class="info">Press</a>
-				</div>
-				<div class="footer-left-icons">
-					<a href="https://vk.com/phazkseta"><img src="images/social/vk.svg" alt="" class="footer-icon"></a>
-					<a href=""><img src="images/social/youtube.svg" alt="" class="footer-icon"></a>
-					<a href=""><img src="images/social/facebook.svg" alt="" class="footer-icon"></a>
-				</div>
-				
-			</div>
-		</div>
-		<div class="display">
-			<div id="time"></div>
-		</div>
-	</footer>
+	<?php
+		require_once "footer.html";
+	?>
 	<script src="script.js"></script>
 </body>
 </html>

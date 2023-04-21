@@ -20,3 +20,4 @@ if (hours < 10) {
 }
 time.textContent = hours + ":" + minutes + ":" + seconds + " " + day_night;
 })
+
