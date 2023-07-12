@@ -4,17 +4,26 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.css">
 	<title>Frispers</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet">
-	<script src="script.js"></script>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<?php
-		require_once "header.php";
-	?>
+	<div class="up_menu">
+		<p class="logo">Frispers.</p>
+		<ul class="menu">
+			<li><a href="index.php">Home</a></li>
+			<li><a href="#">Workspace</a></li>
+			<li><a href="#">Service</a></li>
+			<li><a href="#">Events</a></li>
+			<li><a href="#">Revievs</a></li>
+			<li><a href="#">Contact us</a></li>
+		</ul>
+		<ul class="login">
+		</ul>
+	</div>
 	<header class="header">
 		<div class="container">
 			<div class="introducting">
@@ -120,9 +129,26 @@
 				</div>
 		</div>
 	</section>
-	<?php
-		require_once "footer.html";
-	?>
-	<script src="script.js"></script>
+	<footer>
+		<div class="container">
+			<div class="footer-top">
+				<h2 class="footer-logo">Frispes</h2>
+				<p class="footer-text">We offer comfortable spaces, cozy cafe, high-speed internet, spacious parking area and many more for your best workspaces and meetings</p>
+			</div>
+			<div class="footer-bottom">
+				<div class="footer-company">
+					<a href="" class="info">About Us</a>
+					<a href="" class="info">Pricing</a>
+					<a href="" class="info">Careers</a>
+					<a href="" class="info">Press</a>
+				</div>
+				<div class="footer-contact-icons">
+					<a href="#" class="icon-item"><img src="images/social/youtube.svg" alt="" class="icon-img"></a>
+					<a href="#" class="icon-item"><img src="images/social/facebook.svg" alt="" class="icon-img"></a>
+					<a href="#" class="icon-item"><img src="images/social/vk.svg" alt="" class="icon-img"></a>
+				</div>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>

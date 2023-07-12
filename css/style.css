@@ -154,7 +154,7 @@ hr {
 	left: 32%;
 }
 .our-space-section {
-	margin-left: 9%;
+	margin: 0 2.5%;
 }
 .our-space-section-header {
 	display: flex;
@@ -174,8 +174,7 @@ hr {
 .our-space-nav {
 	position: relative;
 	margin-top: 52px;
-	display: flex;
-	
+	display: flex;	
 }
 .our-spaces-button {
 	bottom: 54px;
@@ -246,7 +245,6 @@ hr {
 	border-left: 1px solid #fff;
 }
 .social-container{
-	margin-left: 5%;
 	margin-top: 70px;
 	display: flex;
 	flex-wrap: wrap;
@@ -278,17 +276,16 @@ hr {
 }
 footer {
 	margin-top: 50px;
-	display: flex;
-	flex-direction: row;
 	background-color: #0D2C4A;
 	height: 350px;
 	color: #fff;
-	padding-bottom: 40px;
 }
 .footer-top {
+	margin: 0 auto;
 	display: flex;
 	flex-direction: column;	
 	align-items: center;
+	text-align: center;
 }
 .footer-logo {
 	text-align: center;
@@ -299,36 +296,33 @@ footer {
 	max-width: 40%;
 }
 .footer-bottom {
+	margin: 0 auto;
+	width: 46%;
 	padding-top: 50px;
-	display: flex;
-	justify-content: space-between;
 }
 .footer-company {
 	display: flex;
-	flex-direction: column;
+	justify-content: space-between;
 }
 .info {
 	margin: 5px 0;
 	padding: 5px;
-	color: #fff;
+	color: #6C7781;
 }
 .info:hover {
-	border-left: 2px solid #FF5722;
-	transition: 0.13s;
+	color: #FF5722;
+	transition: 0.1s;
 }
-.footer-left-icons {
+.footer-contact-icons {
+	margin: 30px auto;
+	width: 50%;
 	display: flex;
-	flex-direction: column;
+	justify-content: space-between;
 }
-.footer-icon {
-	padding: 3px;
-	margin: 10px 0px 4px 0px;
-	background-color: #fff;
+.icon-img {
+	width: 40px;
+	height: 40px;
 }
-.footer-icon:hover {
-	background-color: #FF5722;
-	transition: 0.2s;
-}
-#time {
-	border: 2px solid #000;
+.icon-item:hover {
+	border-bottom: 2px solid #FF5722;
 }
